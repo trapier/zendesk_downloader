@@ -45,7 +45,7 @@ class DownloadFiles(object):
         #    full_extension = '.txt'
         #Clean up name
         root = re.sub(r"[^a-zA-Z_0-9\-]", "", root)
-        return '%s_%s%s' % (root, file_id, full_extension)
+        return '%s%s' % (root, full_extension)
 
     def get_formatted_time(self, created_at):
         """Correctly format the time for touch -t from the provided ZenDesk timestamp"""
