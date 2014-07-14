@@ -41,8 +41,8 @@ class DownloadFiles(object):
     def fix_filename(self, file_id, filename):
         """Make filename ZenDesk organizational friendly"""
         root, full_extension, last_extention = self.filename_split(filename)
-        if not full_extension:
-            full_extension = '.txt'
+        #if not full_extension:
+        #    full_extension = '.txt'
         #Clean up name
         root = re.sub(r"[^a-zA-Z_0-9\-]", "", root)
         return '%s_%s%s' % (root, file_id, full_extension)
