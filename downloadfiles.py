@@ -113,7 +113,7 @@ class DownloadFiles(object):
     def download_files(self, base_download_directory, attachment_info):
         """Download all the files provided in the attachments dictionary"""
         # Ensure the download directory exists
-        download_directory = os.path.join(base_download_directory, attachment_info['organization_id'], attachment_info['ticket_id'])
+        download_directory = os.path.join(base_download_directory, attachment_info['ticket_id'])
         if not os.path.exists(download_directory):
             os.makedirs(download_directory)
 
