@@ -131,7 +131,7 @@ class DownloadFiles(object):
                 urllib.urlretrieve(url, local_filename)
 
                 # Check if file extraction is possible
-                self.check_and_extract_files(download_directory, filename, local_filename, formatted_time)
+                #self.check_and_extract_files(download_directory, filename, local_filename, formatted_time)
                 self.touch_file(formatted_time, local_filename)
 
         return download_directory
